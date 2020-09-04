@@ -1,0 +1,41 @@
+@media only screen and (max-device-width:480px){
+    .showcase{
+        height:100%;
+        nav{
+            h1{
+            font-size: 40px;
+            }
+            a{
+                font-size: 30px;
+            }
+           
+        }
+        &-content{
+            display: block;
+            text-align: center;
+            padding-top:50px;
+            p{
+                font-size: 3vw;
+            }
+        }
+        .container{
+            padding-top:30px;
+        }
+    }
+
+}
+
+@media only screen and (max-width:800px){
+    .showcase{
+        // height:400px;
+        &-content{
+            text-align: center;
+            padding-top:50px;
+
+            img{
+                display:none;
+            }
+        }
+    }
+
+}

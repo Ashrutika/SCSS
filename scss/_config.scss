@@ -1,0 +1,22 @@
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return darken($color,50%);
+    }
+    @else{
+        @return lighten($color,80%);
+    }
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+// $spaceamounts : (10,15,20,25);
+
+// @each $space in $spaceamounts{
+//     .my-#{$space}{
+//     //    font-size:($space + 5px); 
+//        color: rgb(100, (20 + $space), (20 + $space));
+//     }
+// }

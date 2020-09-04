@@ -1,0 +1,34 @@
+@use "variables";
+
+%btn{
+    border-radius: 5px;
+    display: inline-block;
+    padding:8px 20px;
+    margin: 3px;
+
+    &:hover{
+        transform: scale(0.98);
+    }
+}
+
+@mixin set-btn-color($color){
+    @extend %btn;
+    @if(lightness($color) > 50){
+        background-color: darken($color,50%);
+        color:$color;
+    }
+    @else{
+        background-color: lighten($color,80%);
+        color:$color;
+    }
+
+}
+.btn-primary{
+    @extend %btn;
+    @include set-btn-color(variables.$primary);
+}
+
+.btn-secondary{
+    @extend %btn;
+    @include set-btn-color(variables.$primary);
+}
